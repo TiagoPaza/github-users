@@ -1,7 +1,6 @@
-import 'package:github_users/app/constant.dart';
-import 'package:github_users/data/responses/responses.dart';
 import 'package:dio/dio.dart';
-import 'package:retrofit/http.dart';
+import 'package:github_users/app/constant.dart';
+import 'package:retrofit/retrofit.dart';
 
 part 'app_api.g.dart';
 
@@ -10,7 +9,8 @@ abstract class AppServiceClient {
   factory AppServiceClient(Dio dio, {String baseUrl}) = _AppServiceClient;
 
   @GET("/search/users")
-  Future<UsersResponse> users(
+  Future<HttpResponse<dynamic>> users(
     @Query("q") String name,
+    @Query("page") int page,
   );
 }

@@ -98,6 +98,10 @@ class HomeView extends StatelessWidget {
               return UserDetailCard(userDetailResponse: userDetailResponse);
             },
             separatorBuilder: (BuildContext context, int index) {
+              if (index == state.usersResponse!.items!.length - 2) {
+                getIt.get<HomeCubit>().getUsers();
+              }
+
               return const SizedBox(height: 16.0);
             },
           );
@@ -134,7 +138,7 @@ class HomeView extends StatelessWidget {
         ),
       ),
       onSubmitted: (String value) {
-        getIt.get<HomeCubit>().getUser(name: value);
+        getIt.get<HomeCubit>().getUsers(name: value);
       },
     );
   }

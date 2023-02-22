@@ -10,10 +10,27 @@ class HomeCubit extends Cubit<HomeState> {
 
   HomeCubit(this._homeUseCase) : super(HomeState());
 
-  getUser({required String name}) async {
-    UsersUseCaseInput useCaseInput = UsersUseCaseInput(name);
+  getUsers({String? name}) async {
+    UsersUseCaseInput useCaseInput;
 
-    emit(state.copyWith(usersContentState: UsersContentState.LOADING));
+    if (name != null) {
+      emit(state.copyWith(
+        usersContentState: UsersContentState.LOADING,
+        userName: name,
+      ));
+
+      useCaseInput = UsersUseCaseInput(state.userName!, state.currentPage);
+    } else {
+      if (state.currentPage <= state.usersResponse!.lastPage!) {
+        int nextPage = state.currentPage;
+
+        emit(state.copyWith(currentPage: nextPage++));
+
+        useCaseInput = UsersUseCaseInput(state.userName!, nextPage);
+      } else {
+        return;
+      }
+    }
 
     (await _homeUseCase.execute(useCaseInput)).fold((failure) {
       emit(state.copyWith(usersContentState: UsersContentState.ERROR));

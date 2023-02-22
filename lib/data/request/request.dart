@@ -6,8 +6,10 @@ part 'request.g.dart';
 class UserRequest {
   @JsonKey(name: "name")
   String name;
+  @JsonKey(name: "page")
+  int page;
 
-  UserRequest(this.name);
+  UserRequest(this.name, this.page);
 
 // from json
   factory UserRequest.fromJson(Map<String, dynamic> json) =>

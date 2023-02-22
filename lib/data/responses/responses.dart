@@ -4,8 +4,8 @@ part 'responses.g.dart';
 
 @JsonSerializable()
 class BaseResponse {
-  @JsonKey(name: "status")
-  int? status;
+  @JsonKey(name: "status_code")
+  int? statusCode;
   @JsonKey(name: "message")
   String? message;
 }
@@ -43,12 +43,19 @@ class UserDetailResponse {
 class UsersResponse extends BaseResponse {
   @JsonKey(name: "total_count")
   int? totalCount;
+  @JsonKey(name: "last_page")
+  int? lastPage;
   @JsonKey(name: "incomplete_results")
   bool? incompleteResults;
   @JsonKey(name: "items")
   List<UserDetailResponse>? items;
 
-  UsersResponse(this.totalCount, this.incompleteResults, this.items);
+  UsersResponse(
+    this.totalCount,
+    this.lastPage,
+    this.incompleteResults,
+    this.items,
+  );
 
 // from json
   factory UsersResponse.fromJson(Map<String, dynamic> json) =>

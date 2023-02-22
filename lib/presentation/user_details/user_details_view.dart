@@ -75,8 +75,15 @@ class UserDetailsView extends StatelessWidget {
             ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(16.0)),
               child: Container(
-                color: ColorManager.secondary,
                 padding: const EdgeInsets.all(18.0),
+                decoration: BoxDecoration(
+                  color: ColorManager.secondary,
+                  borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                  border: Border.all(
+                    width: 1.0,
+                    color: ColorManager.border,
+                  ),
+                ),
                 child: Column(
                   children: <Widget>[
                     if (this._userDetailResponse.id != null)

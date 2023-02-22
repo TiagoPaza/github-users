@@ -29,8 +29,12 @@ extension UsersResponseMapper on UsersResponse? {
             .cast<UserDetailResponse>()
             .toList();
 
-    return UsersResponse(this?.totalCount?.orZero() ?? ZERO,
-        this?.incompleteResults?.orHas() ?? HAS, mappedItems);
+    return UsersResponse(
+      this?.totalCount?.orZero() ?? ZERO,
+      this?.lastPage?.orZero() ?? ZERO,
+      this?.incompleteResults?.orHas() ?? HAS,
+      mappedItems,
+    );
   }
 }
 

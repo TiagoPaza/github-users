@@ -76,7 +76,8 @@ class HomeView extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       bloc: getIt.get<HomeCubit>(),
       builder: (BuildContext context, HomeState state) {
-        if (state.usersContentState == UsersContentState.LOADING) {
+        if (state.usersContentState == UsersContentState.LOADING &&
+            state.usersResponse == null) {
           return Center(
             child: CircularProgressIndicator(color: ColorManager.white),
           );
@@ -86,24 +87,31 @@ class HomeView extends StatelessWidget {
           return Container(color: Colors.red);
         }
 
-        if (state.usersContentState == UsersContentState.SUCCESS) {
-          return ListView.separated(
-            padding: const EdgeInsets.all(16.0),
-            controller: this._scrollController,
-            itemCount: state.usersResponse!.items!.length,
-            itemBuilder: (BuildContext context, int index) {
-              UserDetailResponse userDetailResponse =
-                  state.usersResponse!.items![index];
+        if (state.usersContentState == UsersContentState.SUCCESS ||
+            state.usersResponse != null &&
+                state.usersContentState == UsersContentState.LOADING) {
+          return NotificationListener<ScrollEndNotification>(
+            onNotification: onNotification,
+            child: ListView.separated(
+              padding: const EdgeInsets.all(16.0),
+              controller: this._scrollController,
+              itemCount: state.usersResponse!.items!.length,
+              itemBuilder: (BuildContext context, int index) {
+                UserDetailResponse userDetailResponse =
+                    state.usersResponse!.items![index];
 
-              return UserDetailCard(userDetailResponse: userDetailResponse);
-            },
-            separatorBuilder: (BuildContext context, int index) {
-              if (index == state.usersResponse!.items!.length - 2) {
-                getIt.get<HomeCubit>().getUsers();
-              }
+                if (showLoaderListEnd(index, state)) {
+                  return Center(
+                    child: CircularProgressIndicator(color: ColorManager.white),
+                  );
+                }
 
-              return const SizedBox(height: 16.0);
-            },
+                return UserDetailCard(userDetailResponse: userDetailResponse);
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return const SizedBox(height: 16.0);
+              },
+            ),
           );
         }
 
@@ -115,6 +123,25 @@ class HomeView extends StatelessWidget {
         );
       },
     );
+  }
+
+  bool showLoaderListEnd(int index, HomeState state) {
+    if (state.usersResponse!.items!.length == 100) return false;
+
+    if (index == state.usersResponse!.items!.length - 1 &&
+        state.usersContentState == UsersContentState.LOADING) {
+      return true;
+    }
+
+    return false;
+  }
+
+  bool onNotification(ScrollEndNotification t) {
+    if (t.metrics.pixels > 0 && t.metrics.atEdge) {
+      getIt.get<HomeCubit>().getUsers();
+    }
+
+    return true;
   }
 
   Widget _searchTextField() {

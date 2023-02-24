@@ -12,19 +12,20 @@ class HomeCubit extends Cubit<HomeState> {
 
   getUsers({String? name}) async {
     UsersUseCaseInput useCaseInput;
+    int nextPage = state.currentPage + 1;
 
     if (name != null) {
-      emit(state.copyWith(
-        usersContentState: UsersContentState.LOADING,
-        userName: name,
-      ));
+      emit(
+        HomeState(
+          userName: name,
+          usersContentState: UsersContentState.LOADING,
+        ),
+      );
 
       useCaseInput = UsersUseCaseInput(state.userName!, state.currentPage);
     } else {
       if (state.currentPage <= state.usersResponse!.lastPage!) {
-        int nextPage = state.currentPage;
-
-        emit(state.copyWith(currentPage: nextPage++));
+        emit(state.copyWith(usersContentState: UsersContentState.LOADING));
 
         useCaseInput = UsersUseCaseInput(state.userName!, nextPage);
       } else {
@@ -33,14 +34,30 @@ class HomeCubit extends Cubit<HomeState> {
     }
 
     (await _homeUseCase.execute(useCaseInput)).fold((failure) {
-      emit(state.copyWith(usersContentState: UsersContentState.ERROR));
+      emit(
+        state.copyWith(
+          usersContentState: UsersContentState.ERROR,
+          usersResponse: null,
+        ),
+      );
     }, (UsersResponse usersResponse) {
+      if (state.usersResponse != null && usersResponse.items != null) {
+        if (usersResponse.items!.length <= 100) {
+          state.usersResponse!.items!.addAll(usersResponse.items!);
+
+          usersResponse = state.usersResponse!;
+        }
+      }
+
       emit(
         state.copyWith(
           usersContentState: UsersContentState.SUCCESS,
           usersResponse: usersResponse,
+          currentPage: nextPage,
         ),
       );
+
+      print("CURRENT AFTER RESPONSE: ${state.currentPage}");
     });
   }
 

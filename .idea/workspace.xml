@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7ac634f-60b4-4c07-9e5c-a550cd06a584" name="Changes" comment="feat: Inicializando repositório e implementando telas splash/home/user_details">
+    <list default="true" id="d7ac634f-60b4-4c07-9e5c-a550cd06a584" name="Changes" comment="feat: Refatorando e melhorando funções">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/github-users.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/github-users.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/pod_inputs.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/pod_inputs.fingerprint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/data_source/remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/data_source/remote_data_source.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/mapper/mapper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mapper/mapper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/network/app_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/network/app_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/repository/repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/repository_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/request/request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/request/request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/responses/responses.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/responses/responses.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/domain/usecase/home_usecase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/usecase/home_usecase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/network/dio_factory.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/network/dio_factory.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/home/cubit/home_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/cubit/home_cubit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/cubit/home_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/cubit/home_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/home/home_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/home_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/splash/splash_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/splash/splash_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/user_details/user_details_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_details/user_details_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,24 +41,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tiagopaza/Documents/Mobile/github-users/assets/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/tiagopaza/Documents/Mobile/github-users/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images" />
@@ -131,7 +122,9 @@
       <workItem from="1676062856251" duration="21957000" />
       <workItem from="1676208401789" duration="7791000" />
       <workItem from="1677007797021" duration="1740000" />
-      <workItem from="1677065540402" duration="5659000" />
+      <workItem from="1677065540402" duration="6310000" />
+      <workItem from="1677151828251" duration="11010000" />
+      <workItem from="1677236476304" duration="16440000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Inicializando repositório e implementando telas splash/home/user_details">
       <created>1676123981967</created>
@@ -140,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676123981967</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Refatorando e melhorando funções">
+      <created>1677099027951</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677099027951</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +159,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Inicializando repositório e implementando telas splash/home/user_details" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Inicializando repositório e implementando telas splash/home/user_details" />
+    <MESSAGE value="feat: Refatorando e melhorando funções" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Refatorando e melhorando funções" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

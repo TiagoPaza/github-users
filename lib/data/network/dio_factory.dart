@@ -1,7 +1,7 @@
-import 'package:github_users/app/app_prefs.dart';
-import 'package:github_users/app/constant.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:github_users/app/app_prefs.dart';
+import 'package:github_users/app/constant.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 const String APPLICATION_JSON = "application/json";
@@ -19,7 +19,11 @@ class DioFactory {
     Dio dio = Dio();
     int _timeOut = 60 * 1000;
     String language = await _appPreferences.getAppLanguage();
+    String token =
+        "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";
+
     Map<String, String> headers = {
+      AUTHORIZATION: "Bearer $token",
       CONTENT_TYPE: APPLICATION_JSON,
       ACCEPT: APPLICATION_JSON,
       DEFAULT_LANGUAGE: language

@@ -54,14 +54,9 @@ class HomeView extends StatelessWidget {
           actions: <Widget>[
             if (state.showSearchState == ShowSearchState.TRUE)
               IconButton(
-                icon: Icon(Icons.clear),
-                onPressed: () async {
-                  getIt.get<HomeCubit>().changeSearchState();
-                },
-              ),
-            if (state.showSearchState == ShowSearchState.FALSE)
-              IconButton(
-                icon: Icon(Icons.search),
+                icon: state.showSearchState == ShowSearchState.TRUE
+                    ? Icon(Icons.clear)
+                    : Icon(Icons.search),
                 onPressed: () async {
                   getIt.get<HomeCubit>().changeSearchState();
                 },

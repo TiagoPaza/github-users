@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:github_users/app/app_prefs.dart';
 import 'package:github_users/app/constant.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
@@ -19,11 +20,9 @@ class DioFactory {
     Dio dio = Dio();
     int _timeOut = 60 * 1000;
     String language = await _appPreferences.getAppLanguage();
-    String token =
-        "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";
 
     Map<String, String> headers = {
-      AUTHORIZATION: "Bearer $token",
+      AUTHORIZATION: "Bearer ${dotenv.env['GUTHUB_AUTHORIZATION'] ?? ''}",
       CONTENT_TYPE: APPLICATION_JSON,
       ACCEPT: APPLICATION_JSON,
       DEFAULT_LANGUAGE: language
@@ -36,16 +35,17 @@ class DioFactory {
       headers: headers,
     );
 
-    if (kReleaseMode) {
-      print("release mode no logs");
-    } else {
+    if (!kReleaseMode) {
       dio.interceptors.add(
         PrettyDioLogger(
           requestHeader: true,
-          requestBody: true,
-          responseHeader: true,
+          // requestBody: true,
+          // responseHeader: true,
+          responseBody: true,
         ),
       );
+    } else {
+      print("release mode no logs");
     }
 
     return dio;

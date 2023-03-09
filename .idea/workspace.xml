@@ -5,14 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7ac634f-60b4-4c07-9e5c-a550cd06a584" name="Changes" comment="feat: Refatorando e melhorando funções">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Roboto-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Roboto-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Roboto-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Roboto-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Roboto-ThinItalic.ttf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data/network/dio_factory.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/network/dio_factory.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/cubit/home_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/cubit/home_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/home/home_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/home_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/resources/styles_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/resources/styles_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/resources/theme_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/resources/theme_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/tiagopaza/Documents/Mobile/github-users/assets/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "flutter.settings",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tiagopaza/Documents/Mobile/github-users/assets/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images" />
@@ -124,7 +138,15 @@
       <workItem from="1677007797021" duration="1740000" />
       <workItem from="1677065540402" duration="6310000" />
       <workItem from="1677151828251" duration="11010000" />
-      <workItem from="1677236476304" duration="16440000" />
+      <workItem from="1677236476304" duration="17138000" />
+      <workItem from="1677332318202" duration="2566000" />
+      <workItem from="1677496525997" duration="10033000" />
+      <workItem from="1677585023611" duration="974000" />
+      <workItem from="1677846274103" duration="929000" />
+      <workItem from="1678100746083" duration="1685000" />
+      <workItem from="1678188724856" duration="5295000" />
+      <workItem from="1678233364199" duration="381000" />
+      <workItem from="1678397755503" duration="73000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Inicializando repositório e implementando telas splash/home/user_details">
       <created>1676123981967</created>
@@ -140,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677099027951</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Refatorando e melhorando funções">
+      <created>1677278997257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677278997257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -52,15 +52,14 @@ class HomeView extends StatelessWidget {
             statusBarColor: ColorManager.secondary,
           ),
           actions: <Widget>[
-            if (state.showSearchState == ShowSearchState.TRUE)
-              IconButton(
-                icon: state.showSearchState == ShowSearchState.TRUE
-                    ? Icon(Icons.clear)
-                    : Icon(Icons.search),
-                onPressed: () async {
-                  getIt.get<HomeCubit>().changeSearchState();
-                },
-              ),
+            IconButton(
+              icon: state.showSearchState == ShowSearchState.TRUE
+                  ? Icon(Icons.clear)
+                  : Icon(Icons.search),
+              onPressed: () async {
+                getIt.get<HomeCubit>().changeSearchState();
+              },
+            ),
           ],
         );
       },

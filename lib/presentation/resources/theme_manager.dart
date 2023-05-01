@@ -39,7 +39,7 @@ ThemeData getApplicationTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         textStyle: getRegularStyle(color: ColorManager.white),
-        primary: ColorManager.primary,
+        backgroundColor: ColorManager.primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSize.s12),
         ),
@@ -48,21 +48,21 @@ ThemeData getApplicationTheme() {
 
     // Text theme
     textTheme: TextTheme(
-      headline1:
-          getMediumStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
-      headline2:
+      displayLarge:
+          getMediumStyle(color: ColorManager.darkGrey, fontSize: FontSize.s18),
+      displayMedium:
           getRegularStyle(color: ColorManager.white, fontSize: FontSize.s16),
-      headline3:
-          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s16),
-      headline4:
+      displaySmall:
+          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s14),
+      headlineMedium:
           getRegularStyle(color: ColorManager.primary, fontSize: FontSize.s14),
-      subtitle1:
+      titleMedium:
           getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
-      subtitle2:
+      titleSmall:
           getMediumStyle(color: ColorManager.primary, fontSize: FontSize.s14),
-      bodyText2: getMediumStyle(color: ColorManager.lightGrey),
-      caption: getRegularStyle(color: ColorManager.grey1),
-      bodyText1: getRegularStyle(color: ColorManager.grey),
+      bodyMedium: getMediumStyle(color: ColorManager.lightGrey),
+      bodySmall: getRegularStyle(color: ColorManager.grey1),
+      bodyLarge: getRegularStyle(color: ColorManager.grey),
     ),
     // input decoration theme (text form field)
 
@@ -109,5 +109,7 @@ ThemeData getApplicationTheme() {
         ),
       ),
     ),
+    colorScheme:
+        ColorScheme.fromSwatch().copyWith(secondary: ColorManager.grey),
   );
 }

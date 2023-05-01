@@ -1,14 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:github_users/app/app_prefs.dart';
 import 'package:github_users/app/di.dart';
 import 'package:github_users/presentation/resources/routes_manager.dart';
 import 'package:github_users/presentation/resources/theme_manager.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class MyApp extends StatefulWidget {
   MyApp._internal(); // private named constructor
-  int appState = 0;
+
   static final MyApp instance =
       MyApp._internal(); // single instance -- singleton
 

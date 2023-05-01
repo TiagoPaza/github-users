@@ -13,7 +13,6 @@ class MockHomeUseCase extends Mock implements HomeUseCase {}
 void main() {
   test('verifica se retorna UsersResponse', () async {
     final MockHomeUseCase mockHomeUseCase = MockHomeUseCase();
-
     final Either<Failure, UsersResponse> matcher = Right(usersResponseMock);
 
     when(() => mockHomeUseCase.execute(usersUseCaseInputMock))
@@ -26,7 +25,6 @@ void main() {
 
   test('verifica a chamada ao UseCase', () async {
     final MockHomeUseCase mockHomeUseCase = MockHomeUseCase();
-
     final Either<Failure, UsersResponse> matcher = Right(usersResponseMock);
 
     when(() => mockHomeUseCase.execute(usersUseCaseInputMock))

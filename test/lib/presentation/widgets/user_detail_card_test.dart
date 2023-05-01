@@ -4,7 +4,7 @@ import 'package:github_users/presentation/home/widgets/users_detail_card.dart';
 import 'package:github_users/presentation/resources/routes_manager.dart';
 import 'package:github_users/presentation/user_details/user_details_view.dart';
 
-import '../../mocks/user_detail_response_mock.dart';
+import '../../../mocks/response/user_detail_response_mock.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

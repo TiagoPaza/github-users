@@ -5,8 +5,8 @@ import 'package:github_users/data/responses/responses.dart';
 import 'package:github_users/domain/usecase/home_usecase.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../mocks/users_response_mock.dart';
-import '../../mocks/users_usecase_input_mock.dart';
+import '../../../mocks/response/users_response_mock.dart';
+import '../../../mocks/usecase/users_usecase_input_mock.dart';
 
 class MockHomeUseCase extends Mock implements HomeUseCase {}
 

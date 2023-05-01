@@ -4,9 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7ac634f-60b4-4c07-9e5c-a550cd06a584" name="Changes" comment="feat: Refatorando e melhorando funções">
+    <list default="true" id="d7ac634f-60b4-4c07-9e5c-a550cd06a584" name="Changes" comment="fix: Removendo if desnecessário das actions da home_view">
+      <change afterPath="$PROJECT_DIR$/lib/data/responses/responses_parser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/repository/repository_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/usecase/base_usecase_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/usecase/home_usecase_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/.last_build_id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/FontManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/assets/translations/en-US.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/fonts/MaterialIcons-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/easy_localization/i18n/ar-DZ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/easy_localization/i18n/ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/easy_localization/i18n/en-US.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/easy_localization/i18n/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/shaders/ink_sparkle.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/libs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/tmp/packLibsflutterBuildDebug/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Pods.build/Release-iphonesimulator/Flutter.build/dgph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Pods.build/Release-iphonesimulator/Pods-Runner.build/dgph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/pod_inputs.fingerprint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/last_build_run.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/data_source/remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/data_source/remote_data_source.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/network/dio_factory.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/network/dio_factory.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/repository/repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/repository_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/request/request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/request/request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/domain/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/repository/repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/domain/usecase/home_usecase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/usecase/home_usecase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/home/cubit/home_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/cubit/home_cubit.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/home/home_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/home_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,24 +76,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tiagopaza/Documents/Mobile/github-users/assets/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/tiagopaza/Documents/Mobile/github-users/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images" />
@@ -62,39 +104,51 @@
       <recent name="$PROJECT_DIR$/test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/domain/repository" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/test/core/presentation/resources" />
       <recent name="$PROJECT_DIR$/lib/presentation" />
       <recent name="$PROJECT_DIR$/lib/presentation/user_details/bloc" />
-      <recent name="$PROJECT_DIR$/lib/presentation/main/home/bloc" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
+  <component name="RunManager" selected="Flutter Test.tests in repository_test.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in app_constants_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/core/constants/app_constants_test.dart" />
+    <configuration name="tests in base_usecase_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/domain/usecase/base_usecase_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in user_detail_card_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/presentation/widgets/user_detail_card_test.dart" />
+    <configuration name="tests in home_usecase_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/domain/usecase/home_usecase_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="user detail card test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="user detail card test" />
-      <option name="testFile" value="$PROJECT_DIR$/test/presentation/widgets/user_detail_card_test.dart" />
-      <option name="useRegexp" value="true" />
+    <configuration name="tests in manager_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/presentation/resources/manager_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in repository_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/domain/repository/repository_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="verifica se retorna UsersResponse" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="verifica se retorna UsersResponse" />
+      <option name="testFile" value="$PROJECT_DIR$/test/domain/usecase/home_usecase_test.dart" />
+      <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter Test.tests in user_detail_card_test.dart" />
-        <item itemvalue="Flutter Test.user detail card test" />
-        <item itemvalue="Flutter Test.tests in app_constants_test.dart" />
+        <item itemvalue="Flutter Test.tests in repository_test.dart" />
+        <item itemvalue="Flutter Test.tests in base_usecase_test.dart" />
+        <item itemvalue="Flutter Test.verifica se retorna UsersResponse" />
+        <item itemvalue="Flutter Test.tests in home_usecase_test.dart" />
+        <item itemvalue="Flutter Test.tests in manager_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +181,10 @@
       <workItem from="1678188724856" duration="5295000" />
       <workItem from="1678233364199" duration="381000" />
       <workItem from="1678397755503" duration="259000" />
-      <workItem from="1678448162684" duration="623000" />
+      <workItem from="1678448162684" duration="4169000" />
+      <workItem from="1682776901447" duration="18185000" />
+      <workItem from="1682851529666" duration="4953000" />
+      <workItem from="1682945519372" duration="11577000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Inicializando repositório e implementando telas splash/home/user_details">
       <created>1676123981967</created>
@@ -157,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678397862188</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: Removendo if desnecessário das actions da home_view">
+      <created>1678448846381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678448846381</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +241,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Inicializando repositório e implementando telas splash/home/user_details" />
     <MESSAGE value="feat: Refatorando e melhorando funções" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Refatorando e melhorando funções" />
+    <MESSAGE value="fix: Removendo if desnecessário das actions da home_view" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Removendo if desnecessário das actions da home_view" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

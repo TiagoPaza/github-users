@@ -38,10 +38,11 @@ class DioFactory {
     if (!kReleaseMode) {
       dio.interceptors.add(
         PrettyDioLogger(
-          requestHeader: true,
+          // requestHeader: true,
+          request: false,
           // requestBody: true,
           // responseHeader: true,
-          responseBody: true,
+          responseBody: false,
         ),
       );
     } else {

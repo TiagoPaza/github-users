@@ -3,11 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:github_users/app/di.dart';
-import 'package:github_users/data/responses/responses.dart';
 import 'package:github_users/presentation/home/cubit/home_cubit.dart';
 import 'package:github_users/presentation/home/widgets/users_detail_card.dart';
 import 'package:github_users/presentation/resources/assets_manager.dart';
 import 'package:github_users/presentation/resources/color_manager.dart';
+import 'package:infinite_scroll/infinite_scroll.dart';
 import 'package:scroll_app_bar/scroll_app_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -84,28 +84,16 @@ class HomeView extends StatelessWidget {
         if (state.usersContentState == UsersContentState.SUCCESS ||
             state.usersResponse != null &&
                 state.usersContentState == UsersContentState.LOADING) {
-          return NotificationListener<ScrollEndNotification>(
-            onNotification: onNotification,
-            child: ListView.separated(
-              padding: const EdgeInsets.all(16.0),
-              controller: this._scrollController,
-              itemCount: state.usersResponse!.items!.length,
-              itemBuilder: (BuildContext context, int index) {
-                UserDetailResponse userDetailResponse =
-                    state.usersResponse!.items![index];
-
-                if (showLoaderListEnd(index, state)) {
-                  return Center(
-                    child: CircularProgressIndicator(color: ColorManager.white),
-                  );
-                }
-
-                return UserDetailCard(userDetailResponse: userDetailResponse);
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return const SizedBox(height: 16.0);
-              },
-            ),
+          return InfiniteScrollList(
+            onLoadingStart: (page) async {
+              getIt.get<HomeCubit>().getUsers();
+            },
+            children: state.usersResponse!.items!.map((e) {
+              return Container(
+                padding: const EdgeInsets.all(8.0),
+                child: UserDetailCard(userDetailResponse: e),
+              );
+            }).toList(),
           );
         }
 
@@ -128,14 +116,6 @@ class HomeView extends StatelessWidget {
     }
 
     return false;
-  }
-
-  bool onNotification(ScrollEndNotification t) {
-    if (t.metrics.pixels > 0 && t.metrics.atEdge) {
-      getIt.get<HomeCubit>().getUsers();
-    }
-
-    return true;
   }
 
   Widget _searchTextField() {
@@ -163,9 +143,4 @@ class HomeView extends StatelessWidget {
       },
     );
   }
-
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  // }
 }

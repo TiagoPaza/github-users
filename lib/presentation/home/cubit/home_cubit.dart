@@ -16,10 +16,7 @@ class HomeCubit extends Cubit<HomeState> {
 
     if (name != null) {
       emit(
-        HomeState(
-          userName: name,
-          usersContentState: UsersContentState.LOADING,
-        ),
+        HomeState(userName: name, usersContentState: UsersContentState.LOADING),
       );
 
       useCaseInput = UsersUseCaseInput(state.userName!, state.currentPage);

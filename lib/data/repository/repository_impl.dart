@@ -18,10 +18,12 @@ class RepositoryImpl extends Repository {
       this._remoteDataSource, this._localDataSource, this._networkInfo);
 
   @override
-  Future<Either<Failure, UsersResponse>> users(UserRequest userRequest) async {
+  Future<Either<Failure, UsersResponse>> users(
+      UsersRequest usersRequest) async {
     if (await _networkInfo.isConnected) {
       try {
-        final response = await _remoteDataSource.users(userRequest);
+        final UsersResponse response =
+            await _remoteDataSource.users(usersRequest);
 
         if (response.statusCode == ResponseCode.SUCCESS) {
           return Right(response.toDomain());

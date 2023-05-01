@@ -3,18 +3,18 @@ import 'package:json_annotation/json_annotation.dart';
 part 'request.g.dart';
 
 @JsonSerializable()
-class UserRequest {
+class UsersRequest {
   @JsonKey(name: "name")
   String name;
   @JsonKey(name: "page")
   int page;
 
-  UserRequest(this.name, this.page);
+  UsersRequest(this.name, this.page);
 
 // from json
-  factory UserRequest.fromJson(Map<String, dynamic> json) =>
-      _$UserRequestFromJson(json);
+  factory UsersRequest.fromJson(Map<String, dynamic> json) =>
+      _$UsersRequestFromJson(json);
 
 // to json
-  Map<String, dynamic> toJson() => _$UserRequestToJson(this);
+  Map<String, dynamic> toJson() => _$UsersRequestToJson(this);
 }

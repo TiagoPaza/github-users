@@ -14,9 +14,10 @@ class HomeUseCase extends BaseUseCase<UsersUseCaseInput, UsersResponse> {
   Future<Either<Failure, UsersResponse>> execute(
     UsersUseCaseInput useCaseInput,
   ) async {
-    UserRequest userRequest = UserRequest(useCaseInput.name, useCaseInput.page);
+    UsersRequest usersRequest =
+        UsersRequest(useCaseInput.name, useCaseInput.page);
 
-    return await this._repository.users(userRequest);
+    return await this._repository.users(usersRequest);
   }
 }
 

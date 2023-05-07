@@ -41,7 +41,7 @@ class RemoteDataSourceImplementer implements RemoteDataSource {
 
     ResponsesParser parser = ResponsesParser(content.data);
 
-    return parser.parseInBackground();
+    return parser.parseUsersInBackground();
     // return UsersResponse.fromJson(content.response.data!);
   }
 }

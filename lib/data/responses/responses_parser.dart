@@ -7,15 +7,15 @@ class ResponsesParser {
 
   ResponsesParser(this.json);
 
-  Future<UsersResponse> parseInBackground() async {
-    final p = ReceivePort();
+  Future<UsersResponse> parseUsersInBackground() async {
+    final ReceivePort p = ReceivePort();
 
-    await Isolate.spawn(_parseJson, p.sendPort);
+    await Isolate.spawn(_parseUsersJson, p.sendPort);
 
     return await p.first;
   }
 
-  Future<void> _parseJson(SendPort p) async {
+  Future<void> _parseUsersJson(SendPort p) async {
     Isolate.exit(p, UsersResponse.fromJson(json));
   }
 }
